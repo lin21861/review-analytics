@@ -8,4 +8,11 @@ with open('reviews.txt', 'r') as f:
 		if count % 1000 == 0 # %=求餘數 例如：7%3=1 (7除以3餘數是1)
 			 print(len(data))
 
-print(data[0])
+print('檔案讀取完了，總共有',len(data), '筆資料' )
+
+
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+print('留言平均長度為', sum_len / len(data))
+
